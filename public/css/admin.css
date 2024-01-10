@@ -1,0 +1,217 @@
+footer {
+  position: sticky;
+  bottom: 0px;
+  text-align: center;
+  /* margin-top: 425px; */
+  padding: 6px 10px;
+  background-color: #ad053d;
+  color: white;
+}
+
+.idForm {
+  max-width: 700px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin: 15px auto;
+  width: 200px;
+  padding: 15px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Gambar/book-bg.jpg);
+  background-color: grey;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+.hai {
+  background-color: #ad053d;
+  color: white;
+  width: 30%;
+  padding: 10px;
+  height: 40px;
+  text-align: left -40px;
+}
+
+.font {
+  background-color: #ad053d;
+}
+
+.entry {
+  background-color: #ad053d;
+  color: white;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* article {
+  margin-left: 240px;
+  margin-top: -290px;
+  margin-right: 290px;
+  float: left;
+  padding: 30px;
+  width: 80%;
+  height: 310px;
+} */
+.membaca {
+  font-size: 15px;
+  text-align: center;
+}
+
+.h4 {
+  border-style: solid;
+  border-spacing: 10px;
+  border-color: rgb(255, 255, 255);
+  width: 96%;
+  font-family: Arial, Helvetica, sans-serif bold;
+  font-size: 5px;
+  font-weight: bold;
+  color: #000000;
+}
+
+nav {
+  /* float: left; */
+  /* width: 22%; */
+  /* height: 270px; */
+  padding: 5px;
+  margin: 0%;
+  padding: 0%;
+  /* border: 0cm; */
+}
+nav ul {
+  float: left;
+  content: "";
+  display: table;
+  clear: both;
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: lightgray;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 0px 15px;
+  text-decoration: none;
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: gray;
+  color: white;
+}
+@media (max-width: 600px) {
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 150px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* CSS untuk Tabel Daftar Peminjaman */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+table.table th,
+table.table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table.table thead {
+  background-color: #f2f2f2;
+}
+
+table.table th {
+  font-weight: bold;
+}
+
+table.table tbody tr {
+  background-color: #f2f2f2;
+}
+
+table.table tbody tr:hover {
+  background-color: #e0e0e0;
+}

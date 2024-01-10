@@ -1,0 +1,405 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(http://localhost/PinjamRuang/public/img/borrow-IT!.jpg) no-repeat;
+  background-size: 1360px 720px;
+  background-position: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  font-size: 32px;
+  color: white;
+  user-select: none;
+}
+
+.navBar a {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navBar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navBar a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #ad053d;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ad053d;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.btnLogin-popup:hover {
+  background: #ad053d;
+  color: #ad053d;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  border-bottom-left-radius: 20px;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.change .bar1 {
+  transform: translate(0, 5px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transform: translateX(400px);
+  transition: none;
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.form-box h2 {
+  font-size: 32px;
+  color: black;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid black;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 20px;
+  color: black;
+  line-height: 57px;
+}
+
+.remember-forget {
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forget label input {
+  accent-color: black;
+  margin-right: 3px;
+}
+
+.remember-forget a {
+  text-decoration: none;
+}
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  height: 45px;
+  background: #ad053d;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 15px;
+  color: #ad053d;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  color: #ad053d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+.bars {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.barsIcon {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.reducedMenu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s;
+}
+
+.reducedMenu.open {
+  height: 270px;
+}
+.reducedMenu.close {
+  display: none;
+}
+
+.reducedMenu li {
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reducedMenu li a {
+  text-decoration: none;
+}
+.dropdownBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.dropdownBtn:hover {
+  background: white;
+  color: #ad053d;
+}
+
+.reducedMenu a {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  align-items: center;
+}
+
+.reducedMenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.reducedMenu a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .navBar {
+    display: none;
+  }
+
+  div .barsIcon {
+    display: block;
+  }
+
+  div.reducedMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 300px) {
+  .reducedMenu {
+    left: 30px;
+    width: unset;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

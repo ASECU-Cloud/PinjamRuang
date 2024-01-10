@@ -1,0 +1,99 @@
+/* CSS untuk Tabel Daftar Peminjaman */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+table.table th,
+table.table td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table.table thead {
+  background-color: #f2f2f2;
+}
+
+table.table th {
+  font-weight: bold;
+}
+
+table.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Gaya untuk judul "Daftar Peminjaman" */
+h4.text-primary {
+  font-size: 24px;
+  text-align: center;
+  /* color: #007bff; */
+}
+
+/* Gaya untuk kontainer utama */
+.bg-white {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* Gaya untuk kontainer kolom input jika diperlukan */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 50px;
+  color: #4caf50;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  color: #e6edf4;
+  background-color: #ad053d;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
